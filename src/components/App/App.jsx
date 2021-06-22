@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Wrapper, Container } from './App.styles'
 
@@ -33,13 +33,12 @@ function App () {
         left={
           <ShoppingList
             title="Produtos disponíveis"
-            products={products}
             onToggle={handleToggle}
           />}
         middle={
           <ShoppingList
             title="Sua lista de compras"
-            products={selectedProducts}
+            displayOnlySelected
             onToggle={handleToggle}
           />}
         right={<div>
